@@ -1,6 +1,7 @@
 const formSubmission = {
     init: function () {
         document.querySelector("form").addEventListener("submit", formSubmission.handleSubmit);
+        window.addEventListener("resize", updateSize);
     },
 
     handleSubmit: function (event) {
@@ -12,4 +13,10 @@ const formSubmission = {
     },
 };
 
+function updateSize() {
+    heightOutput.textContent = window.innerHeight;
+    widthOutput.textContent = window.innerWidth;
+}
+
+updateSize();
 document.addEventListener("DOMContentLoaded", formSubmission.init);
