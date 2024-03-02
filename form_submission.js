@@ -5,10 +5,10 @@ const formSubmission = {
 
     handleSubmit: function (event) {
         event.preventDefault();
-        let rating = document.querySelector('input[name="rating"]:checked').value;
+        let rating = document.querySelector("form").rating.value;
         document.querySelector(".rating_form").textContent = rating;
-        document.querySelector("main").classList.add("content_hidden");
-        document.querySelector("section").classList.remove("content_hidden");
+        document.querySelector(".formContent").classList.add("content_hidden");
+        document.querySelector(".thankYou").classList.remove("content_hidden");
     },
 };
 
